@@ -1,0 +1,72 @@
+[
+	{
+		"id": 1,
+		"titulo": "Código Limpo",
+		"autor": "Robert C. Martin",
+		"descricao": "Livro sobre código limpo e boas práticas de programação.",
+		"valor": 89.90
+	},
+	{
+		"id": 2,
+		"titulo": "O Programador Pragmático",
+		"autor": "Andrew Hunt e David Thomas",
+		"descricao": "Livro sobre hábitos e técnicas para programadores.",
+		"valor": 99.90
+	},
+	{
+		"id": 3,
+		"titulo": "Padrões de Projetos",
+		"autor": "Erich Gamma, Richard Helm, Ralph Johnson e John Vlissides",
+		"descricao": "Livro sobre padrões clássicos de projeto de software.",
+		"valor": 119.90
+	},
+	{
+		"id": 4,
+		"titulo": "Refatoração",
+		"autor": "Martin Fowler",
+		"descricao": "Livro sobre como melhorar o código existente.",
+		"valor": 109.90
+	},
+	{
+		"id": 5,
+		"titulo": "O Mítico Homem-Mês",
+		"autor": "Frederick P. Brooks Jr.",
+		"descricao": "Livro sobre projetos de software e trabalho em equipe.",
+		"valor": 79.90
+	},
+	{
+		"id": 6,
+		"titulo": "Estruturas de Dados e Algoritmos em Java",
+		"autor": "Robert Lafore",
+		"descricao": "Livro sobre algoritmos e estruturas de dados.",
+		"valor": 94.90
+	},
+	{
+		"id": 7,
+		"titulo": "Algoritmos: Teoria e Prática",
+		"autor": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest e Clifford Stein",
+		"descricao": "Livro sobre fundamentos e análise de algoritmos.",
+		"valor": 149.90
+	},
+	{
+		"id": 8,
+		"titulo": "Domain-Driven Design",
+		"autor": "Eric Evans",
+		"descricao": "Livro sobre modelagem de software orientada ao domínio.",
+		"valor": 139.90
+	},
+	{
+		"id": 9,
+		"titulo": "Effective Java",
+		"autor": "Joshua Bloch",
+		"descricao": "Livro sobre boas práticas de programação em Java.",
+		"valor": 104.90
+	},
+	{
+		"id": 10,
+		"titulo": "Use a Cabeça! Padrões de Projetos",
+		"autor": "Eric Freeman e Elisabeth Robson",
+		"descricao": "Livro introdutório sobre padrões de projeto.",
+		"valor": 89.90
+	}
+]

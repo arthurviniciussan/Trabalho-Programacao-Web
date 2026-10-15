@@ -1,0 +1,70 @@
+/* Variáveis de Cor e Config Glovbais */
+:root {
+	--cor-destaque-claro: #FFE6B5;
+	--cor-fundo: #FFF6E3;
+	--cor-principal: #815B0E;
+	--cor-destaque: #E8C276;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: var(--cor-fundo);
+	color: var(--cor-principal);
+	font-family: Georgia, 'Times New Roman', serif;
+}
+
+a {
+	color: inherit;
+}
+/* ======================================== */
+
+/* Menu do Site */
+.site-header {
+	background-color: var(--cor-principal);
+	color: var(--cor-fundo);
+}
+
+.site-nav {
+	width: min(1120px, 100%);
+	min-height: 76px;
+	margin: 0 auto;
+	padding: 16px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.site-brand {
+	color: var(--cor-destaque-claro);
+	font-size: 1.35rem;
+	font-weight: 700;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.site-nav-links {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 8px;
+}
+
+.site-nav-link {
+	padding: 10px 12px;
+	border-radius: 4px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	transition: background-color 160ms ease, color 160ms ease;
+}
+
+.site-nav-link:hover,
+.site-nav-link[aria-current='page'] {
+	background-color: var(--cor-destaque);
+	color: var(--cor-principal);
+}
+/* ======================================== */
