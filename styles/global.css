@@ -24,6 +24,7 @@ a {
 
 /* Menu do Site */
 .site-header {
+	
 	background-color: var(--cor-principal);
 	color: var(--cor-fundo);
 }
@@ -66,5 +67,10 @@ a {
 .site-nav-link[aria-current='page'] {
 	background-color: var(--cor-destaque);
 	color: var(--cor-principal);
+}
+.site-brand img{
+	width: 45px;
+	right: 40px;
+	object-fit: contain;
 }
 /* ======================================== */
