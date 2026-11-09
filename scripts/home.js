@@ -1,9 +1,5 @@
 const listaLivros = document.querySelector('#book-list');
-const statusCatalogo = document.querySelector('#catalog-status');
-const formatoMoeda = new Intl.NumberFormat('pt-BR', {
-	style: 'currency',
-	currency: 'BRL'
-});
+
 
 function criarCard(livro) {
 	const card = document.createElement('article');
@@ -11,7 +7,7 @@ function criarCard(livro) {
 
 	if (livro.imagem) {
 		const imagem = document.createElement('img');
-		imagem.className = 'book-card';
+		imagem.className = 'book-cover';
 		imagem.src = livro.imagem;
 		imagem.alt = `Capa de ${livro.titulo}`;
 		imagem.loading = 'lazy';
@@ -31,7 +27,7 @@ function criarCard(livro) {
 
 	const preco = document.createElement('p');
 	preco.className = 'book-price';
-	preco.textContent = formatoMoeda.format(livro.valor);
+	preco.textContent = "R$" + livro.valor + "9";
 	preco.setAttribute('aria-label', `Preço: ${preco.textContent}`);
 
 	card.append(titulo, autor, descricao, preco);
@@ -73,14 +69,11 @@ async function carregarLivros() {
 
 		livros.forEach((livro) => fragmento.append(criarCard(livro)));
 		listaLivros.append(fragmento);
-		statusCatalogo.textContent = '';
 	} catch (erro) {
 		console.error('Não foi possível carregar os livros:', erro);
-		statusCatalogo.classList.add('catalog-status--error');
-		statusCatalogo.textContent =
-			'Não foi possível carregar o catálogo. Verifique sua conexão e tente novamente.';
+
 	} finally {
-		listaLivros.setAttribute('aria-busy', 'false');
+		console.log("Tá carregando pai segura...");
 	}
 }
 
