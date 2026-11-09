@@ -7,13 +7,14 @@
 	<title>Início | Código & Página</title>
 	<link rel="stylesheet" href="../styles/global.css">
 	<link rel="stylesheet" href="../styles/home.css">
+	<script src="../scripts/home.js" defer></script>
 </head>
 <body>
     <!-- Cabeçalho do site -->
 	<header class="site-header">
-		<img src="imagens/livro_aberto_transparente.png" alt="">
 		<nav class="site-nav" aria-label="Navegação principal">
 			<a class="site-brand" href="home.html">Código em Página</a>
+			<img src="imagens/livro_aberto_transparente.png">
 			<div class="site-nav-links">
 				<a class="site-nav-link" href="home.html" aria-current="page">Início</a>
 				<a class="site-nav-link" href="carrinho.html">Carrinho</a>
@@ -23,6 +24,27 @@
 		</nav>
 	</header>
     <!-- ======================================= -->
+
+	<!-- Hero do site -->
+	<main class="home-main">
+		<section class="home-hero" aria-label="Banner principal"><img src="../pages/imagens/hero_codigo_em_pagina.jpg" alt="hero_codigo_em_pagina"></section>
+	<!-- ======================================= -->	
+
+
+		<!-- Catálogo do site -->
+		<section class="catalog" aria-labelledby="catalog-title">
+			<div class="catalog-heading">
+				<p class="catalog-eyebrow">Descubra sua próxima leitura</p>
+				<h1 id="catalog-title">Nosso catálogo</h1>
+			</div>
+			<p id="catalog-status" class="catalog-status" role="status" aria-live="polite">
+				Carregando livros...
+			</p>
+			<div id="book-list" class="book-grid" aria-busy="true"></div>
+		</section>
+	<!-- ======================================= -->
+	</main>
+	
 
 </body>
 </html>
