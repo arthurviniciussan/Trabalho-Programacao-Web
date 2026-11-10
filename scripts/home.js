@@ -1,5 +1,34 @@
 const listaLivros = document.querySelector('#book-list');
 
+function adicionarAoCarrinho(livro, botao) {
+	let carrinho;
+	try {
+		carrinho = JSON.parse(localStorage.getItem('carrinho'));
+		if (!Array.isArray(carrinho)) carrinho = [];
+	} catch (erro) {
+		carrinho = [];
+	}
+
+	const existente = carrinho.find((item) => item.id === livro.id);
+	if (existente) {
+		existente.quantidade += 1;
+	} else {
+		carrinho.push({
+			id: livro.id,
+			titulo: livro.titulo,
+			autor: livro.autor,
+			imagem: livro.imagem || '',
+			valor: livro.valor,
+			quantidade: 1
+		});
+	}
+
+	localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+	
+	botao.textContent = 'Adicionado ✓';
+	setTimeout(() => { botao.textContent = 'Adicionar ao carrinho'; }, 1200);
+}
 
 function criarCard(livro) {
 	const card = document.createElement('article');
@@ -30,7 +59,13 @@ function criarCard(livro) {
 	preco.textContent = "R$" + livro.valor + "9";
 	preco.setAttribute('aria-label', `Preço: ${preco.textContent}`);
 
-	card.append(titulo, autor, descricao, preco);
+	const botaoCarrinho = document.createElement('button');
+	botaoCarrinho.type = 'button';
+	botaoCarrinho.className = 'book-button';
+	botaoCarrinho.textContent = 'Adicionar ao carrinho';
+	botaoCarrinho.addEventListener('click', () => adicionarAoCarrinho(livro, botaoCarrinho));
+
+	card.append(titulo, autor, descricao, preco, botaoCarrinho);
 	return card;
 }
 

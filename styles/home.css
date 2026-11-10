@@ -78,3 +78,23 @@
     border-radius: 6px;
     object-fit: cover;
 }
+
+/* Botão "Adicionar ao carrinho" */
+.book-button {
+	margin-top: 14px;
+	padding: 10px 12px;
+	border: 2px solid var(--cor-principal);
+	border-radius: 8px;
+	background-color: var(--cor-principal);
+	color: var(--cor-fundo);
+	font-family: inherit;
+	font-size: 0.95rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background-color 160ms ease, color 160ms ease;
+}
+
+.book-button:hover {
+	background-color: var(--cor-destaque);
+	color: var(--cor-principal);
+}

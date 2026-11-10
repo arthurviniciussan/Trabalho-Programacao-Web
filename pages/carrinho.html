@@ -4,9 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#815B0E">
-	<title>Início | Código & Página</title>
+	<title>Carrinho | Código em Página</title>
 	<link rel="stylesheet" href="../styles/global.css">
 	<link rel="stylesheet" href="../styles/carrinho.css">
+	<script src="../scripts/carrinho.js" defer></script>
 </head>
 <body>
     <!-- Cabeçalho do site -->
@@ -15,14 +16,52 @@
 			<a class="site-brand" href="home.html">Código em Página</a>
 			<img src="imagens/livro_aberto_transparente.png">
 			<div class="site-nav-links">
-				<a class="site-nav-link" href="home.html" aria-current="page">Início</a>
-				<a class="site-nav-link" href="carrinho.html">Carrinho</a>
+				<a class="site-nav-link" href="home.html">Início</a>
+				<a class="site-nav-link" href="carrinho.html" aria-current="page">Carrinho</a>
 				<a class="site-nav-link" href="login.html">Entrar</a>
 				<a class="site-nav-link" href="cadastro.html">Criar conta</a>
 			</div>
 		</nav>
 	</header>
-    <!-- ======================================= -->
+ 
+	<main class="cart-main">
+		<!-- Título -->
+		<div class="cart-heading">
+			<p class="cart-eyebrow">Revise seus livros</p>
+			<h1 id="cart-title">Seu carrinho</h1>
+		</div>
 
+		<div class="cart-layout">
+			<!-- Lista de itens (preenchida pelo carrinho.js) -->
+			<section id="cart-items" class="cart-items" aria-labelledby="cart-title" aria-live="polite"></section>
+
+			<!-- Resumo do pedido -->
+			<aside class="cart-summary" aria-label="Resumo do pedido">
+				<h2>Resumo</h2>
+				<dl>
+					<div><dt>Livros diferentes</dt><dd id="resumo-tipos">0</dd></div>
+					<div><dt>Total de unidades</dt><dd id="resumo-unidades">0</dd></div>
+					<div class="cart-total"><dt>Total</dt><dd id="resumo-total">R$ 0,00</dd></div>
+				</dl>
+				<button type="button" id="btn-finalizar" class="cart-btn cart-btn-primary">Finalizar compra</button>
+				<button type="button" id="btn-esvaziar" class="cart-btn cart-btn-secondary">Esvaziar carrinho</button>
+				<p id="cart-mensagem" class="cart-mensagem" role="status"></p>
+			</aside>
+		</div>
+
+		<!-- Relatório do que está no localStorage -->
+		<section class="cart-report" aria-labelledby="report-title">
+			<h2 id="report-title">Relatório do carrinho</h2>
+			<p class="cart-report-info">Dados guardados no navegador (localStorage, chave "carrinho").</p>
+			<div class="cart-table-wrap">
+				<table>
+					<thead>
+						<tr><th>Livro</th><th>Qtd</th><th>Preço unit.</th><th>Subtotal</th></tr>
+					</thead>
+					<tbody id="report-body"></tbody>
+				</table>
+			</div>
+		</section>
+	</main>
 </body>
 </html>
