@@ -10,7 +10,7 @@
 </head>
 <body>
     
-	 <!-- Cabeçalho do site -->
+	 
 	<header class="site-header">
 		<nav class="site-nav" aria-label="Navegação principal">
 			<a class="site-brand" href="home.html">Código em Página</a>
@@ -23,11 +23,11 @@
 			</div>
 		</nav>
 	</header>
-    <!-- ======================================= -->
+    
 
 
 	<div class="caixa-login">
-	<form class="login">
+		<form class="login" onsubmit="return validarLogin()">
 
 		
 		<h3>Faça login ou crie uma conta</h3>
@@ -39,7 +39,7 @@
 		<P>
 			<label for="senha"></label>
 			<input type="password" id="senha" name="senha" placeholder="Deigite a sua senha" required>
-			
+		</P>	
 	
 			<br>
 	
@@ -47,8 +47,9 @@
 	
 		<p><a href="cadastro.html">Cadastre-se</a></p>
 	
-		</P>
+		
 	</form>
 </div>
+<script src="../scripts/login.js"></script>
 </body>
 </html>
