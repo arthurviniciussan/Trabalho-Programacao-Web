@@ -4,25 +4,55 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#815B0E">
-	<title>Início | Código & Página</title>
+	<title>Cadastro | Código em Página</title>
 	<link rel="stylesheet" href="../styles/global.css">
 	<link rel="stylesheet" href="../styles/cadastro.css">
+	<script src="../scripts/cadastro.js" defer></script>
 </head>
 <body>
-    <!-- Cabeçalho do site -->
 	<header class="site-header">
 		<nav class="site-nav" aria-label="Navegação principal">
 			<a class="site-brand" href="home.html">Código em Página</a>
 			<img src="imagens/livro_aberto_transparente.png">
 			<div class="site-nav-links">
-				<a class="site-nav-link" href="home.html" aria-current="page">Início</a>
+				<a class="site-nav-link" href="home.html">Início</a>
 				<a class="site-nav-link" href="carrinho.html">Carrinho</a>
 				<a class="site-nav-link" href="login.html">Entrar</a>
-				<a class="site-nav-link" href="cadastro.html">Criar conta</a>
+				<a class="site-nav-link" href="cadastro.html" aria-current="page">Criar conta</a>
 			</div>
 		</nav>
 	</header>
-    <!-- ======================================= -->
 
+	<main class="cadastro-main">
+		<form id="form-cadastro" class="cadastro-card" novalidate>
+			<h1>Criar conta</h1>
+			<p class="cadastro-sub">Preencha os dados para se cadastrar.</p>
+
+			<label for="usuario">Nome de usuário</label>
+			<input type="text" id="usuario" placeholder="Digite seu nome de usuário" required>
+
+			<label for="email">E-mail</label>
+			<input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+			<label for="email2">Confirmar e-mail</label>
+			<input type="email" id="email2" placeholder="Digite o e-mail novamente" required>
+
+			<label for="senha">Senha</label>
+			<input type="password" id="senha" placeholder="Mínimo de 6 caracteres" required>
+
+			<label for="senha2">Confirmar senha</label>
+			<input type="password" id="senha2" placeholder="Digite a senha novamente" required>
+
+			<label for="cep">CEP</label>
+			<input type="text" id="cep" placeholder="00000-000" maxlength="9" inputmode="numeric" required>
+
+			<label for="endereco">Endereço</label>
+			<input type="text" id="endereco" placeholder="Rua, número, bairro e cidade" required>
+
+			<button type="submit">Cadastrar</button>
+			<p id="mensagem" class="cadastro-mensagem" role="status"></p>
+			<a class="cadastro-link" href="login.html">Já tenho conta</a>
+		</form>
+	</main>
 </body>
 </html>
