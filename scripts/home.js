@@ -3,7 +3,8 @@ const listaLivros = document.querySelector('#book-list');
 function adicionarAoCarrinho(livro, botao) {
 	let carrinho;
 	carrinho = JSON.parse(localStorage.getItem('carrinho'));
-	
+	if(!Array.isArray(carrinho)) { carrinho = []}
+
 	const existente = carrinho.find((item) => item.id === livro.id);
 	if (existente) {
 		existente.quantidade += 1;
