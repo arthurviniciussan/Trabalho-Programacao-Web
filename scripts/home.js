@@ -26,7 +26,7 @@ function adicionarAoCarrinho(livro, botao) {
 	localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
 	
-	botao.textContent = 'Adicionado ✓';
+	botao.textContent = 'Adicionado!';
 	setTimeout(() => { botao.textContent = 'Adicionar ao carrinho'; }, 1200);
 }
 
@@ -57,7 +57,6 @@ function criarCard(livro) {
 	const preco = document.createElement('p');
 	preco.className = 'book-price';
 	preco.textContent = "R$" + livro.valor + "9";
-	preco.setAttribute('aria-label', `Preço: ${preco.textContent}`);
 
 	const botaoCarrinho = document.createElement('button');
 	botaoCarrinho.type = 'button';
@@ -91,8 +90,7 @@ async function carregarLivros() {
 			typeof livro.titulo === 'string' &&
 			typeof livro.autor === 'string' &&
 			typeof livro.descricao === 'string' &&
-			typeof livro.valor === 'number' &&
-			Number.isFinite(livro.valor)
+			typeof livro.valor === 'number'
 		);
 
 		if (livros.length != livrosValidos.length) {
