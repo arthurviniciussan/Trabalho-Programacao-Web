@@ -76,32 +76,8 @@ function criarCard(livro) {
 async function carregarLivros() {
 	try {
 		const resposta = await fetch('../data/produtos.json');
-		if (!resposta.ok) {
-			throw new Error(`Falha ao carregar o catálogo (HTTP ${resposta.status}).`);
-		}
 
 		const livros = await resposta.json();
-		if (!Array.isArray(livros)) {
-			throw new Error('O arquivo do catálogo tem um formato inválido.');
-		}
-
-		const livrosValidos = livros.filter((livro) =>
-			livro &&
-			typeof livro.titulo === 'string' &&
-			typeof livro.autor === 'string' &&
-			typeof livro.descricao === 'string' &&
-			typeof livro.valor === 'number'
-		);
-
-		if (livros.length != livrosValidos.length) {
-			statusCatalogo.textContent = 'problemas ao validar os produtos adicionados';
-			return;
-		}
-
-		if (livros.length === 0) {
-			statusCatalogo.textContent = 'Nenhum livro disponível no momento.';
-			return;
-		}
 
 		const fragmento = document.createDocumentFragment();
 
