@@ -4,9 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#815B0E">
-	<title>Início | Código & Página</title>
+	<title>Descrição | Código & Página</title>
 	<link rel="stylesheet" href="../styles/global.css">
 	<link rel="stylesheet" href="../styles/desc-produto.css">
+	<script src="../scripts/desc-produto.js" defer></script>
 </head>
 <body>
     <!-- Cabeçalho do site -->
@@ -15,7 +16,7 @@
 			<a class="site-brand" href="home.html">Código em Página</a>
 			<img src="imagens/livro_aberto_transparente.png">
 			<div class="site-nav-links">
-				<a class="site-nav-link" href="home.html" aria-current="page">Início</a>
+				<a class="site-nav-link" href="home.html">Início</a>
 				<a class="site-nav-link" href="carrinho.html">Carrinho</a>
 				<a class="site-nav-link" href="login.html">Entrar</a>
 				<a class="site-nav-link" href="cadastro.html">Criar conta</a>
@@ -24,5 +25,20 @@
 	</header>
     <!-- ======================================= -->
 
+	<!-- Descrição do livro -->
+	<main class="desc-main">
+		<section class="desc-card">
+			<img id="imagem" class="desc-imagem" src="" alt="">
+
+			<div class="desc-info">
+				<h1 id="titulo">Carregando...</h1>
+				<p id="autor" class="desc-autor"></p>
+				<p id="descricao" class="desc-texto"></p>
+				<p id="preco" class="desc-preco"></p>
+				<a class="desc-voltar" href="home.html">Voltar ao catálogo</a>
+			</div>
+		</section>
+	</main>
+	<!-- ======================================= -->
 </body>
 </html>
