@@ -2,12 +2,7 @@ const listaLivros = document.querySelector('#book-list');
 
 function adicionarAoCarrinho(livro, botao) {
 	let carrinho;
-	try {
-		carrinho = JSON.parse(localStorage.getItem('carrinho'));
-		if (!Array.isArray(carrinho)) carrinho = [];
-	} catch (erro) {
-		carrinho = [];
-	}
+	carrinho = JSON.parse(localStorage.getItem('carrinho'));
 
 	const existente = carrinho.find((item) => item.id === livro.id);
 	if (existente) {
@@ -38,8 +33,6 @@ function criarCard(livro) {
 		const imagem = document.createElement('img');
 		imagem.className = 'book-cover';
 		imagem.src = livro.imagem;
-		imagem.alt = `Capa de ${livro.titulo}`;
-		imagem.loading = 'lazy';
 		card.append(imagem);
 	}
 
