@@ -98,3 +98,11 @@
 	background-color: var(--cor-destaque);
 	color: var(--cor-principal);
 }
+
+/* Botão "Ver descrição" */
+.book-button-detalhes {
+	text-align: center;
+	text-decoration: none;
+	background-color: var(--cor-fundo);
+	color: var(--cor-principal);
+}

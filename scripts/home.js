@@ -65,7 +65,12 @@ function criarCard(livro) {
 	botaoCarrinho.textContent = 'Adicionar ao carrinho';
 	botaoCarrinho.addEventListener('click', () => adicionarAoCarrinho(livro, botaoCarrinho));
 
-	card.append(titulo, autor, descricao, preco, botaoCarrinho);
+	const botaoDetalhes = document.createElement('a');
+	botaoDetalhes.className = 'book-button book-button-detalhes';
+	botaoDetalhes.textContent = 'Ver descrição';
+	botaoDetalhes.href = 'desc-produto.html?id=' + livro.id;
+
+	card.append(titulo, autor, descricao, preco, botaoCarrinho, botaoDetalhes);
 	return card;
 }
 
